@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI, ML, DL & Full Stack Developer</title>
+
+    <!-- ================== SEO & SOCIAL SHARING TAGS (UPDATED) ================== -->
+    <meta name="description" content="S. Girish Kumar's portfolio showcasing projects in AI, Machine Learning, and Full Stack Development. Seeking opportunities to build intelligent and efficient solutions.">
+    <meta name="keywords" content="S Girish Kumar, Portfolio, AI, ML, Deep Learning, Full Stack Developer, Python, TensorFlow, React">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sgirishkumar04.github.io/My-Portfolio-SGK/">
+    <meta property="og:title" content="SGK | AI, ML, DL & Full Stack Developer">
+    <meta property="og:description" content="Portfolio of S. Girish Kumar, showcasing projects in AI, Machine Learning, and Full Stack Development.">
+    <meta property="og:image" content="https://sgirishkumar04.github.io/My-Portfolio-SGK/assets/GIRISH.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://sgirishkumar04.github.io/My-Portfolio-SGK/">
+    <meta property="twitter:title" content="SGK | AI, ML, DL & Full Stack Developer">
+    <meta property="twitter:description" content="Portfolio of S. Girish Kumar, showcasing projects in AI, Machine Learning, and Full Stack Development.">
+    <meta property="twitter:image" content="https://sgirishkumar04.github.io/My-Portfolio-SGK/assets/GIRISH.jpg">
+    <!-- ======================================================================= -->
+
+    <!-- Favicon Links -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicons/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicons/site.webmanifest">
+    
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons: Boxicons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <style>
+        :root {
+            --bg-color-start: #0c101d; --bg-color-end: #070912;
+            --primary-color: #00ddff; --secondary-color: #4ade80;
+            --text-color: #b0c4de; --heading-color: #e6f1ff;
+            --card-bg-color: rgba(23, 31, 51, 0.5); --border-color: rgba(60, 74, 107, 0.5);
+            --glow-color: rgba(0, 221, 255, 0.3); --header-height: 70px;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Poppins', sans-serif; background: linear-gradient(135deg, var(--bg-color-start), var(--bg-color-end)); color: var(--text-color); line-height: 1.7; overflow-x: hidden; }
+        .aurora-background { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; opacity: 0.2; background: radial-gradient(circle at 10% 20%, var(--primary-color), transparent 50%), radial-gradient(circle at 80% 90%, var(--secondary-color), transparent 50%), radial-gradient(circle at 50% 50%, #8a2be2, transparent 60%); animation: moveAurora 20s infinite alternate; }
+        @keyframes moveAurora { 0% { transform: scale(1) translate(0, 0) rotate(0deg); } 100% { transform: scale(1.5) translate(20px, -20px) rotate(10deg); } }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+        section { padding: 8rem 0 4rem; min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+        .section-title { text-align: center; font-size: clamp(1.8rem, 5vw, 2.5rem); margin-bottom: 4rem; color: var(--heading-color); font-weight: 700; letter-spacing: 1px; position: relative; }
+        .section-title::after { content: ''; position: absolute; width: 70px; height: 3px; background: linear-gradient(90deg, var(--primary-color), var(--secondary-color)); border-radius: 3px; bottom: -15px; left: 50%; transform: translateX(-50%); box-shadow: 0 0 15px var(--glow-color); }
+        .btn { display: inline-block; padding: 12px 32px; background: var(--primary-color); color: var(--bg-color-end); border: 2px solid transparent; border-radius: 8px; text-decoration: none; font-weight: 600; transition: all 0.3s ease; cursor: pointer; }
+        .btn:hover { background: transparent; color: var(--primary-color); border-color: var(--primary-color); transform: translateY(-3px); box-shadow: 0 0 25px var(--glow-color); }
+        .btn.secondary { background: transparent; color: var(--primary-color); border-color: var(--primary-color); }
+        .btn.secondary:hover { background: var(--primary-color); color: var(--bg-color-end); }
+        .header { position: fixed; top: 0; left: 0; width: 100%; padding: 0.8rem 5%; background: rgba(12, 16, 29, 0.5); backdrop-filter: blur(12px); display: flex; justify-content: space-between; align-items: center; z-index: 1000; border-bottom: 1px solid var(--border-color); transition: top 0.3s ease; }
+        
+        .logo { display: block; }
+        .logo img {
+            height: 40px; /* Increased size */
+            width: auto;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+        .logo:hover img { transform: scale(1.08); }
+
+        .navbar { display: flex; gap: 2.5rem; }
+        .navbar a { font-size: 1rem; color: var(--text-color); text-decoration: none; position: relative; transition: color 0.3s ease; }
+        .navbar a::after { content: ''; position: absolute; left: 0; bottom: -5px; width: 0; height: 2px; background: var(--primary-color); transition: width 0.3s ease; }
+        .navbar a:hover, .navbar a.active { color: var(--primary-color); }
+        .navbar a:hover::after, .navbar a.active::after { width: 100%; }
+        #menu-icon { display: none; font-size: 2rem; color: var(--heading-color); cursor: pointer; }
+        #home { padding-top: var(--header-height); }
+        .hero-content { display: flex; align-items: center; justify-content: space-between; gap: 3rem; width: 100%; }
+        .hero-text { max-width: 600px; }
+        .hero-intro { font-size: 1.2rem; color: var(--primary-color); font-weight: 500; margin-bottom: 0.5rem; letter-spacing: 1px; }
+        .hero-text h1 { font-size: clamp(2.8rem, 8vw, 5rem); font-weight: 700; color: var(--heading-color); line-height: 1; margin-bottom: 0; white-space: nowrap; }
+        .hero-text h1 span { background: linear-gradient(90deg, var(--primary-color), var(--secondary-color)); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+        .hero-text .subtitle { font-size: 1.2rem; color: var(--text-color); margin: 1.5rem 0 2.5rem; max-width: 500px; }
+        .hero-buttons { display: flex; gap: 1rem; }
+        .hero-img { position: relative; }
+        .hero-img img { width: 320px; height: 320px; object-fit: contain; border-radius: 50%; border: 4px solid var(--border-color); background-color: var(--bg-color-end); transition: all 0.4s ease; }
+        .hero-img:hover img { border-color: var(--primary-color); box-shadow: 0 0 35px var(--glow-color); transform: scale(1.05); }
+        .spotlight-card { background: var(--card-bg-color); border: 1px solid var(--border-color); border-radius: 12px; position: relative; overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; height: 100%; }
+        .spotlight-card::before { content: ""; position: absolute; width: 200px; height: 200px; left: var(--mouse-x, -100px); top: var(--mouse-y, -100px); background: radial-gradient(circle, var(--primary-color) 0%, transparent 60%); opacity: 0; transform: translate(-50%, -50%); transition: opacity 0.4s ease; }
+        .spotlight-card:hover { transform: translateY(-5px); }
+        .spotlight-card:hover::before { opacity: 0.1; }
+        .spotlight-card .card-content { position: relative; z-index: 2; padding: 2rem; display: flex; flex-direction: column; height: 100%;}
+        .about-content { max-width: 800px; margin: auto; text-align: center; }
+        .about-content p { font-size: 1.1rem; margin-bottom: 2rem; color: var(--text-color); }
+        .education-card { padding: 2rem; }
+        .education-card h3 { color: var(--primary-color); font-size: 1.5rem; }
+        .education-card h4 { color: var(--heading-color); font-size: 1.2rem; margin: 0.5rem 0; }
+        
+        /* Experience Section */
+        .experience-timeline { position: relative; max-width: 900px; margin: auto; }
+        .experience-timeline::after { content: ''; position: absolute; width: 3px; background-color: var(--border-color); top: 0; bottom: 0; left: 50%; margin-left: -1.5px; }
+        .experience-item { padding: 10px 40px; position: relative; width: 50%; }
+        .experience-item::after { content: ''; position: absolute; width: 16px; height: 16px; right: -8px; background-color: var(--bg-color-start); border: 3px solid var(--primary-color); top: 35px; border-radius: 50%; z-index: 1; box-shadow: 0 0 10px var(--glow-color); }
+        .left { left: 0; padding-right: 60px; }
+        .right { left: 50%; padding-left: 60px; }
+        .right::after { left: -8px; }
+        .experience-content { padding: 1.5rem 2rem; }
+        .experience-content h3 { color: var(--primary-color); font-size: 1.3rem; margin-bottom: 0.25rem; }
+        .experience-content .date { font-size: 0.9rem; font-weight: 300; color: var(--secondary-color); margin-bottom: 1rem; }
+        .experience-content ul { list-style: none; padding-left: 0; }
+        .experience-content ul li { position: relative; padding-left: 20px; margin-bottom: 0.5rem; }
+        .experience-content ul li::before { content: '>'; position: absolute; left: 0; color: var(--primary-color); font-weight: 600; }
+
+        /* Skills Section */
+        .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+        .skill-category h3 { color: var(--heading-color); margin-bottom: 1.5rem; padding-bottom: 0.75rem; border-bottom: 1px solid var(--border-color); display: flex; align-items: center; font-weight: 600; }
+        .skill-category h3 i { font-size: 1.5rem; margin-right: 0.75rem; color: var(--primary-color); }
+        .skill-list { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+        .skill-item { background: var(--bg-color-start); padding: 6px 14px; border-radius: 6px; font-size: 0.9rem; font-weight: 500; }
+        
+        /* Projects Section */
+        .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; }
+        .project-card .title-container { overflow: hidden; margin-bottom: 1rem; }
+        .project-card .card-content h3 { color: var(--heading-color); font-size: 1.4rem; font-weight: 600; white-space: nowrap; transform: translateX(0); transition: transform 0.5s ease-out; }
+        .project-card .card-content h3.is-sliding { animation: slide-right-to-left 8s linear infinite; }
+        @keyframes slide-right-to-left { from { transform: translateX(0%); } to { transform: translateX(-100%); } }
+        .project-tech-stack { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; }
+        .tech-tag { background: rgba(0, 221, 255, 0.1); color: var(--primary-color); padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 500; }
+        .project-links { margin-top: auto; padding-top: 1rem; }
+        .project-links a { color: var(--primary-color); text-decoration: none; font-weight: 600; display: inline-flex; align-items: center; }
+        .project-links a i { margin-right: 0.5rem; font-size: 1.2rem; }
+        .project-links a:not(:last-child) { margin-right: 1.5rem; }
+        .project-links a:hover { text-decoration: underline; }
+        
+        /* Contact Section */
+        .contact-container { max-width: 800px; margin: auto; text-align: center; }
+        .contact-container .intro-text {max-width: 600px; margin: -2rem auto 3rem;}
+        .contact-info { display: flex; justify-content: center; gap: 2rem; margin: 2rem 0 3rem; flex-wrap: wrap; }
+        .contact-info a { color: var(--text-color); text-decoration: none; font-size: 1rem; transition: color 0.3s ease; }
+        .contact-info a:hover { color: var(--primary-color); }
+        .contact-info i { margin-right: 0.5rem; vertical-align: middle; }
+        
+        /* Contact Modal Styles */
+        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(5px); display: flex; align-items: center; justify-content: center; z-index: 2000; opacity: 0; visibility: hidden; transition: opacity 0.4s ease, visibility 0.4s ease; }
+        .modal-overlay.open { opacity: 1; visibility: visible; }
+        #contact-modal { background: var(--card-bg-color); border: 1px solid var(--border-color); border-radius: 12px; padding: 2.5rem; position: relative; width: 90%; max-width: 500px; transform: scale(0.95); transition: transform 0.4s ease; }
+        .modal-overlay.open #contact-modal { transform: scale(1); }
+        #modal-close-btn { position: absolute; top: 1rem; right: 1rem; font-size: 1.8rem; color: var(--text-color); cursor: pointer; transition: color 0.3s, transform 0.3s; }
+        #modal-close-btn:hover { color: var(--primary-color); transform: rotate(90deg); }
+        #contact-modal h3 { color: var(--heading-color); text-align: center; margin-bottom: 2rem; }
+        .contact-form { display: flex; flex-direction: column; gap: 1.5rem; }
+        .contact-form input, .contact-form textarea { width: 100%; padding: 1rem; background: var(--bg-color-start); border: 1px solid var(--border-color); border-radius: 8px; color: var(--text-color); font-family: 'Poppins', sans-serif; transition: all 0.3s ease; }
+        .contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--primary-color); box-shadow: 0 0 15px var(--glow-color); }
+        .contact-form textarea { resize: vertical; min-height: 150px; }
+        .contact-form .btn { width: 100%; }
+        #form-result { margin-top: 1rem; padding: 1rem; border-radius: 8px; text-align: center; display: none;}
+        #form-result.success { background-color: rgba(74, 222, 128, 0.2); color: var(--secondary-color); }
+        
+        /* Footer & Back to Top */
+        .footer { padding: 2rem 0; text-align: center; font-size: 0.9rem; border-top: 1px solid var(--border-color); margin-top: 2rem; }
+        .back-to-top { position: fixed; bottom: -50px; right: 2rem; background-color: var(--primary-color); color: var(--bg-color-end); width: 40px; height: 40px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; text-decoration: none; transition: all 0.4s ease; }
+        .back-to-top.show { bottom: 2rem; }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero-content { flex-direction: column-reverse; text-align: center; }
+            .hero-buttons { justify-content: center; }
+        }
+        @media (max-width: 768px) {
+            #menu-icon { display: block; }
+            .navbar { position: absolute; top: 100%; left: -100%; width: 100%; padding: 1rem 5%; background: var(--bg-color-start); flex-direction: column; transition: all 0.4s ease; }
+            .navbar.open { left: 0; }
+            .experience-timeline::after { left: 20px; }
+            .experience-item { width: 100%; padding-left: 70px; padding-right: 25px; }
+            .experience-item::before { content: none; }
+            .left::after, .right::after { left: 11.5px; }
+            .right { left: 0%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="aurora-background"></div>
+
+    <header class="header">
+        <a href="#home" class="logo">
+            <img src="assets/logo.png" alt="SGK Logo">
+        </a>
+        <!-- NAVBAR ORDER UPDATED -->
+        <nav class="navbar"><a href="#home" class="active">Home</a><a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a></nav>
+        <i class='bx bx-menu' id="menu-icon"></i>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <p class="hero-intro">Hi, I'm</p>
+                        <h1><span>S Girish Kumar</span></h1>
+                        <p class="subtitle">A Computer Science student passionate about Artificial Intelligence, Machine Learning, Deep Learning, and Full Stack Development. I create intelligent and efficient solutions through code and data.</p>
+                        <div class="hero-buttons"><a href="assets/sgirishkumar_resume.pdf" class="btn" target="_blank" download>Download Resume</a><a href="#contact" class="btn secondary">Contact Me</a></div>
+                    </div>
+                    <div class="hero-img"><img src="assets/GIRISH.jpg" alt="S. Girish Kumar"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <div>
+                    <h2 class="section-title">About Me</h2>
+                    <div class="about-content">
+                        <p>I'm S. Girish Kumar, currently pursuing my B.Tech in Computer Science and Engineering at Amrita Vishwa Vidyapeetham, Coimbatore. I’m passionate about Artificial Intelligence, Machine Learning, Deep Learning, and Full Stack Development. As a dedicated and enthusiastic learner, I'm eager to apply my academic knowledge in real-world, professional settings and contribute meaningfully to innovative projects.</p>
+                        <div class="education-card spotlight-card"><div class="card-content"><h3>B.Tech in Computer Science and Engineering</h3><h4>Amrita Vishwa Vidyapeetham, Coimbatore</h4><p>2022 – 2026 (Expected Graduation)</p></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <div class="container">
+                <div>
+                    <h2 class="section-title">Experience</h2>
+                    <div class="experience-timeline">
+                        <div class="experience-item left">
+                            <div class="spotlight-card experience-content">
+                                <h3>💻 Intern – ProTeam Softwares India Pvt Ltd</h3>
+                                <!-- DATE CLARIFIED -->
+                                <span class="date">May 2025 – June 2025</span>
+                                <ul>
+                                    <li>Automated and executed functional & regression test cases for a client web application using Selenium and Maven.</li>
+                                    <li>Collaborated with developers to identify, document, and verify bug fixes, significantly improving software quality.</li>
+                                    <li>Contributed to enhancing the final product to ensure it was stable, issue-free, and met client expectations.</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="experience-item right">
+                            <div class="spotlight-card experience-content">
+                                <h3>🌐 Intern – Bharat Petroleum Corporation Ltd (BPCL)</h3>
+                                <!-- DATE CLARIFIED -->
+                                <span class="date">April 2025 – May 2025</span>
+                                <ul>
+                                    <li>Developed and deployed a full-stack ASP.NET MVC app to monitor open work permits, now actively used at the Kochi refinery.</li>
+                                    <li>Engineered an automated daily email alert system with interactive links to detailed drill-down reports.</li>
+                                    <li>Integrated with a SQL Server backend using C#, dependency injection, and stored procedures for robust data handling.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================================= -->
+        <!-- ============== PROJECTS SECTION MOVED BEFORE SKILLS ============== -->
+        <!-- ================================================================= -->
+        <section id="projects">
+            <div class="container">
+                <div>
+                    <h2 class="section-title">Featured Projects</h2>
+                    <div class="projects-grid">
+                        <div class="project-card spotlight-card">
+                            <div class="card-content">
+                                <div class="title-container"><h3>AI‑ML‑Video‑Summarizer</h3></div>
+                                <div class="project-tech-stack">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">Flask</span>
+                                    <span class="tech-tag">JavaScript</span>
+                                    <span class="tech-tag">Hugging Face</span>
+                                    <span class="tech-tag">Render</span>
+                                </div>
+                                <p>An intelligent web app that transcribes, translates, and summarizes video content. This project showcases resourcefulness by migrating from paid APIs to open-source models (faster-whisper) and solving real-world deployment challenges on a free-tier service.</p>
+                                <div class="project-links">
+                                    <a href="https://github.com/sgirishkumar04/AI-ML-Video-Summarizer" target="_blank"><i class='bx bxl-github'></i>View on GitHub</a>
+                                    <a href="https://video-summarizer-acsw.onrender.com" target="_blank"><i class='bx bx-link-external'></i>Live Demo</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-card spotlight-card">
+                            <div class="card-content">
+                                <div class="title-container"><h3>Newsify: Personalized News App</h3></div>
+                                <div class="project-tech-stack">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">Streamlit</span>
+                                    <span class="tech-tag">Scikit-learn</span>
+                                    <span class="tech-tag">Firebase</span>
+                                </div>
+                                <p>An intelligent news aggregator that delivers a personalized 'For You' feed using TF-IDF and Cosine Similarity. Features secure user authentication and data persistence with Google Firebase, and solves key state management challenges within Streamlit's architecture.</p>
+                                <div class="project-links">
+                                    <a href="https://github.com/sgirishkumar04/Personalised-News-App" target="_blank"><i class='bx bxl-github'></i>View on GitHub</a>
+                                    <a href="https://newsify.streamlit.app/" target="_blank"><i class='bx bx-link-external'></i>Live Demo</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-card spotlight-card">
+                            <div class="card-content">
+                                <div class="title-container"><h3>RE‑NFA‑DFA Converter</h3></div>
+                                <div class="project-tech-stack">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">Automata</span>
+                                    <span class="tech-tag">Graphviz</span>
+                                </div>
+                                <p>A tool that implements classic compiler algorithms to convert any Regular Expression into a DFA. It uses Thompson's Construction to create an NFA, then the Subset Construction algorithm to produce the final DFA, with automatic Graphviz visualization for each step.</p>
+                                <div class="project-links">
+                                    <a href="https://github.com/sgirishkumar04/RE-NFA-DFA" target="_blank"><i class='bx bxl-github'></i>View on GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-card spotlight-card">
+                            <div class="card-content">
+                                <div class="title-container"><h3>Vehicle‑Network‑Selection</h3></div>
+                                <div class="project-tech-stack">
+                                    <span class="tech-tag">Python</span>
+                                    <span class="tech-tag">Matplotlib</span>
+                                    <span class="tech-tag">Sockets</span>
+                                    <span class="tech-tag">V2X</span>
+                                </div>
+                                <p>A simulation of a distributed vehicle network where vehicles intelligently switch between WiFi, DSRC, and Cellular. Features a multi-threaded server and interactive clients, with a live Matplotlib GUI visualizing real-time state changes.</p>
+                                <div class="project-links">
+                                    <a href="https://github.com/sgirishkumar04/Vehicle-Network-Selection-Distributed-Approach" target="_blank"><i class='bx bxl-github'></i>View on GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-card spotlight-card">
+                            <div class="card-content">
+                                <div class="title-container"><h3>OpenBSD Educational Hub</h3></div>
+                                <div class="project-tech-stack">
+                                    <span class="tech-tag">HTML</span>
+                                    <span class="tech-tag">CSS</span>
+                                    <span class="tech-tag">JavaScript</span>
+                                </div>
+                                <p>An educational hub on OpenBSD, featuring from-scratch interactive simulators for CPU Scheduling (SRTF) and Process Synchronization, built with pure vanilla JavaScript.</p>
+                                <div class="project-links">
+                                    <a href="https://github.com/sgirishkumar04/OpenBSD-Website" target="_blank"><i class='bx bxl-github'></i>View on GitHub</a>
+                                    <a href="https://sgirishkumar04.github.io/OpenBSD-Website/" target="_blank"><i class='bx bx-link-external'></i>Live Demo</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <div class="container">
+                <div>
+                    <h2 class="section-title">My Skillset</h2>
+                    <div class="skills-grid">
+                        <div class="skill-category spotlight-card"><div class="card-content"><h3><i class='bx bx-code-alt'></i>Languages</h3><div class="skill-list"><span class="skill-item">Python</span><span class="skill-item">C</span><span class="skill-item">C++</span><span class="skill-item">C#</span><span class="skill-item">JavaScript</span></div></div></div>
+                        <div class="skill-category spotlight-card"><div class="card-content"><h3><i class='bx bx-globe'></i>Web Development</h3><div class="skill-list"><span class="skill-item">HTML</span><span class="skill-item">CSS</span><span class="skill-item">React.js</span><span class="skill-item">Node.js</span><span class="skill-item">Flask</span><span class="skill-item">Streamlit</span><span class="skill-item">ASP.NET MVC</span></div></div></div>
+                        <div class="skill-category spotlight-card"><div class="card-content"><h3><i class='bx bxs-data'></i>Databases</h3><div class="skill-list"><span class="skill-item">MongoDB</span><span class="skill-item">MySQL</span><span class="skill-item">SQL Server</span><span class="skill-item">Firebase</span></div></div></div>
+                        <div class="skill-category spotlight-card"><div class="card-content"><h3><i class='bx bxs-brain'></i>AI/ML & Data Science</h3><div class="skill-list"><span class="skill-item">ML</span><span class="skill-item">DL</span><span class="skill-item">Computer Vision</span><span class="skill-item">TensorFlow</span><span class="skill-item">Keras</span><span class="skill-item">Scikit-learn</span><span class="skill-item">Hugging Face</span><span class="skill-item">NumPy</span><span class="skill-item">Pandas</span><span class="skill-item">Matplotlib</span></div></div></div>
+                        <div class="skill-category spotlight-card"><div class="card-content"><h3><i class='bx bxs-component'></i>Tools & Testing</h3><div class="skill-list"><span class="skill-item">Selenium</span><span class="skill-item">Maven</span><span class="skill-item">Git & GitHub</span><span class="skill-item">Tkinter</span><span class="skill-item">Visual Studio</span></div></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact">
+            <div class="container">
+                <div>
+                    <h2 class="section-title">Get In Touch</h2>
+                    <div class="contact-container">
+                         <p class="intro-text">I'm currently seeking new opportunities and my inbox is always open. Whether you have a question or just want to say hi, I'll get back to you!</p>
+                        <div class="contact-info"><a href="mailto:girishkumars2004@gmail.com"><i class='bx bxs-envelope'></i> girishkumars2004@gmail.com</a><a href="https://github.com/sgirishkumar04" target="_blank"><i class='bx bxl-github'></i> sgirishkumar04</a><a href="tel:7907956075"><i class='bx bxs-phone'></i> 7907956075</a><a href="https://wa.me/917907956079" target="_blank"><i class='bx bxl-whatsapp'></i> WhatsApp</a></div>
+                         <a href="#" class="btn" id="say-hello-btn">Say Hello</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal-overlay" id="contact-modal-overlay">
+        <div id="contact-modal">
+            <i class='bx bx-x' id="modal-close-btn"></i>
+            <h3>Send a message</h3>
+            <form action="https://api.web3forms.com/submit" method="POST" class="contact-form" id="contact-form-modal">
+                <input type="hidden" name="access_key" value="ed5d1b8e-a383-4213-8cd9-8053a17e98e5">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+            <div id="form-result"></div>
+        </div>
+    </div>
+    
+    <footer class="footer"><div class="container"><p>© 2024 S. Girish Kumar. Built with passion and code.</p></div></footer>
+    <a href="#home" class="back-to-top"><i class='bx bx-up-arrow-alt'></i></a>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const menuIcon = document.querySelector('#menu-icon');
+            const navbar = document.querySelector('.navbar');
+            menuIcon.onclick = () => { menuIcon.classList.toggle('bx-x'); navbar.classList.toggle('open'); };
+            navbar.querySelectorAll('a').forEach(link => { link.addEventListener('click', () => { menuIcon.classList.remove('bx-x'); navbar.classList.remove('open'); }); });
+
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.navbar a');
+            window.onscroll = () => {
+                let current = '';
+                sections.forEach(sec => {
+                    const secTop = sec.offsetTop;
+                    if (pageYOffset >= secTop - 150) {
+                        current = sec.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href').includes(current)) {
+                        link.classList.add('active');
+                    }
+                });
+                
+                const backToTopButton = document.querySelector('.back-to-top');
+                if (window.scrollY > 300) { backToTopButton.classList.add('show'); } else { backToTopButton.classList.remove('show'); }
+            };
+
+            const cards = document.querySelectorAll('.spotlight-card');
+            cards.forEach(card => {
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left; const y = e.clientY - rect.top;
+                    card.style.setProperty('--mouse-x', `${x}px`);
+                    card.style.setProperty('--mouse-y', `${y}px`);
+                });
+            });
+
+            const projectCards = document.querySelectorAll('.project-card');
+            projectCards.forEach(card => {
+                const title = card.querySelector('.card-content h3');
+                if (title && title.scrollWidth > title.clientWidth) {
+                    card.addEventListener('mouseenter', () => title.classList.add('is-sliding'));
+                    card.addEventListener('mouseleave', () => title.classList.remove('is-sliding'));
+                }
+            });
+
+            const modalOverlay = document.getElementById('contact-modal-overlay');
+            const openBtn = document.getElementById('say-hello-btn');
+            const closeBtn = document.getElementById('modal-close-btn');
+            const openModal = () => modalOverlay.classList.add('open');
+            const closeModal = () => modalOverlay.classList.remove('open');
+            openBtn.addEventListener('click', (e) => { e.preventDefault(); openModal(); });
+            closeBtn.addEventListener('click', closeModal);
+            modalOverlay.addEventListener('click', (e) => { if (e.target === modalOverlay) { closeModal(); } });
+            document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && modalOverlay.classList.contains('open')) { closeModal(); } });
+
+            const form = document.getElementById('contact-form-modal');
+            const result = document.getElementById('form-result');
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const formData = new FormData(form);
+                const object = {};
+                formData.forEach((value, key) => { object[key] = value; });
+                const json = JSON.stringify(object);
+                result.innerHTML = "Please wait...";
+                result.style.display = "block";
+                result.classList.remove('success');
+
+                fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                    body: json
+                })
+                .then(async (response) => {
+                    let jsonResponse = await response.json();
+                    if (response.status == 200) {
+                        result.innerHTML = "Success! Your message has been sent.";
+                        result.classList.add('success');
+                    } else {
+                        console.log(response);
+                        result.innerHTML = jsonResponse.message;
+                    }
+                })
+                .catch(error => {
+                    console.log(error);
+                    result.innerHTML = "Something went wrong! Please mail to girishkumars2004@gmail.com";
+                })
+                .then(function() {
+                    form.reset();
+                    setTimeout(() => {
+                        result.style.display = "none";
+                        closeModal();
+                    }, 4000);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
