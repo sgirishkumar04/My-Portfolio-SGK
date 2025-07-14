@@ -1,4 +1,4 @@
-# S. Girish Kumar - Personal Portfolio Website 🚀
+# S Girish Kumar - Personal Portfolio Website 🚀
 
 [![Live Demo](https://img.shields.io/badge/Live-Portfolio-2ea44f?style=for-the-badge&logo=github)](https://sgirishkumar04.github.io/My-Portfolio-SGK/)
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
@@ -37,21 +37,24 @@ This portfolio is a static single-page application built with a focus on clean c
 
 ---
 
-## 🚀 How to Run Locally
+## 🚀 You can also create one like this
 
-This project does not require any build tools or complex setup.
+Feel free to use this project as a template to build your own portfolio.
 
-1.  **Clone the repository:**
+1.  **Fork the repository** by clicking the 'Fork' button at the top-right of this page.
+
+2.  **Clone your forked repository** to your local machine:
     ```sh
-    git clone https://github.com/sgirishkumar04/My-Portfolio-SGK.git
-    ```
-
-2.  **Navigate to the project directory:**
-    ```sh
+    git clone https://github.com/YOUR_USERNAME/My-Portfolio-SGK.git
     cd My-Portfolio-SGK
     ```
+    *(Replace `YOUR_USERNAME` with your GitHub username.)*
 
-3.  **Open the `index.html` file in your favorite web browser.**
+3.  **Personalize the content:**
+    -   Open `index.html` and edit the text with your own information (name, bio, projects, experience, etc.).
+    -   Go to the `assets/` folder and replace the images, resume, and favicons with your own files.
+    -   **Crucially:** Create your own free access key at [Web3Forms](https://web3forms.com/) and replace the existing `access_key` in the contact form to ensure you receive messages.
+    -   Update all links (`<a>` tags) to point to your social profiles and live projects.
 
 ---
 
